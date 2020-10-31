@@ -11,7 +11,6 @@
    7.  set LPORT 8080
    8.  exploit
    
-   
    ### Avoiding Anti Virus
     1. sudo apt-get install shellter [ You might be required to install wine32 first (dpkg --add-architecture i386 && apt-get update && apt-get install wine32) ]
     2. shellter
