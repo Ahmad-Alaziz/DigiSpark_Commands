@@ -1,9 +1,8 @@
 // download and run an executable from server
 
 #include "DigiKeyboard.h"
-void setup() {
-}
 
+void setup() {}
 void loop() {
   DigiKeyboard.sendKeyStroke(0);
   DigiKeyboard.delay(500);
