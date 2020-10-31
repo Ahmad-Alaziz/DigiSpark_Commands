@@ -18,3 +18,7 @@
     4. /var/www/htmlEnter path to your executable
     5. Y (to enter stealth mode)
     6. Enter LHOST and LPORT
+    
+    
+   ### Using Winpayloads (if the above method fails)
+    1. https://github.com/nccgroup/Winpayloads/blob/master/README.md
